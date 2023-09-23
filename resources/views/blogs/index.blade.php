@@ -1,24 +1,9 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        @foreach ($list as $blog)
-        <div class="col-lg-3 col-6">
-            <div class="card">
-                <img class="card-image-top" src="{{ $blog->image }}" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $blog->title }}</h5>
-                    <p class="card-text">{{ $blog->content }}</p>
-                </div>
-                <div class="card-body">
-                    <a class="btn btn-link" 
-                        href="{{ route('blogs.show', $blog->slug) }}"
-                    > Baca lagi </a>
-                </div>
-            </div>
-        </div>
-        @endforeach
+<x-guest-layout>
+  <div class="container my-12 ">
+    <div class="grid grid-cols-2 gap-1">
+      @foreach ($list as $blog)
+        <x-blog-card :blog="$blog" />
+      @endforeach
     </div>
-</div>
-@endsection
+  </div>
+</x-guest-layout>
