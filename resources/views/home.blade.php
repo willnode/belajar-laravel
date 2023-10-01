@@ -9,9 +9,10 @@
         <p class="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
           Kini hadir EduTech Masa Kini dengan banyak teknologi untuk belajar!
         </p>
-        <div class="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row"><a
+        <div class="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
+          <a
             href="https://web3templates.com/templates/nextly-landing-page-template-for-startups" target="_blank"
-            rel="noopener" class="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">
+            rel="noopener" class=" btn btn-primary text-lg  ">
             Mulai
           </a>
         </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,10 @@ Route::get('/kontak', [HomeController::class, 'contact'])->name('contact');
 
 Route::resource('/blogs', BlogController::class)->parameters([
     'blogs' => 'blog:slug'
+])->only(['index', 'show']);
+
+Route::resource('/jobs', JobController::class)->parameters([
+    'jobs' => 'job:slug'
 ])->only(['index', 'show']);
 
 require __DIR__.'/auth.php';
