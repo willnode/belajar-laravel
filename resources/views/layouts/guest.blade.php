@@ -79,14 +79,15 @@
             @endforeach
           </ul>
         </div>
-        <div class="hidden mr-3 space-x-4 lg:flex nav__item"><a
-            class="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5" href="/">Get Started</a>
-          <div class="flex items-center"><button
-              class="text-gray-300 rounded-full outline-none focus:outline-none"><span class="sr-only">Light
-                Mode</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                class="w-5 h-5">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-              </svg></button></div>
+        <div class="hidden mr-3 space-x-4 lg:flex nav__item">
+          <a
+            class="btn btn-link" href="{{ route('login') }}">
+            Login
+          </a>
+          <a
+            class="btn btn-primary" href="{{ route('register') }}">
+            Register
+          </a>
         </div>
       </nav>
     </div>

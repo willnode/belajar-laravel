@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminBlogController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
@@ -39,5 +40,7 @@ Route::resource('/blogs', BlogController::class)->parameters([
 Route::resource('/jobs', JobController::class)->parameters([
     'jobs' => 'job:slug'
 ])->only(['index', 'show']);
+
+Route::resource('admin/blog', AdminBlogController::class);
 
 require __DIR__.'/auth.php';
